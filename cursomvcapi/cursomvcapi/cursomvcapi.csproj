@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ApiMultiPartFormData, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ApiMultipartFormDataFormatter.2.1.0\lib\net45\ApiMultiPartFormData.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -163,13 +166,13 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccessController.cs" />
-    <Compile Include="Controllers\AnimalController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ContenidoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Animal.cs">
+    <Compile Include="Models\Contenido.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DB.Context.cs">
@@ -187,7 +190,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Galeria.cs">
+    <Compile Include="Models\Storage.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
@@ -198,8 +201,10 @@
     <Compile Include="Models\WS\AnimalPictureViewModel.cs" />
     <Compile Include="Models\WS\AnimalViewModel.cs" />
     <Compile Include="Models\WS\DeleteViewAccesModel.cs" />
+    <Compile Include="Models\WS\GalleryViewModel.cs" />
     <Compile Include="Models\WS\ListAdminUserViewModel.cs" />
     <Compile Include="Models\WS\ListAnimalsViewModels.cs" />
+    <Compile Include="Models\WS\ListGalleryViewModel.cs" />
     <Compile Include="Models\WS\Reply.cs" />
     <Compile Include="Models\WS\SecurityViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,6 +257,7 @@
       <DependentUpon>DB.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="README.md" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

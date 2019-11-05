@@ -16,8 +16,8 @@ namespace cursomvcapi.Models.WS
         public int? categoria { get; set; }
         public string tags { get; set; }
 
-        public byte[] picture { get; set; }
-        public byte[] foto { get; set; }
+        public string picture { get; set; }
+     
  
     }
 }

@@ -12,12 +12,11 @@ namespace cursomvcapi.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Galeria
+    public partial class Storage
     {
         public int id_galeria { get; set; }
-        public byte[] foto { get; set; }
+        public string foto_name { get; set; }
+        public string foto { get; set; }
         public int id_identificador { get; set; }
-    
-        public virtual Animal Animal { get; set; }
     }
 }

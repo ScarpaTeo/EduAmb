@@ -11,8 +11,8 @@ namespace cursomvcapi.Models.WS
         public string titulo { get; set; }
         public string subtitulo { get; set; }
         public string detalle { get; set; }
-        public int? categoria { get; set; }
+        public int categoria { get; set; }
         public string tags { get; set; }
-        public byte[] picture { get; set; }
+        public string picture { get; set; }
     }
 }

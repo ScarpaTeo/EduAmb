@@ -94,3 +94,4 @@ C:\Users\TeoScarpa\source\repos\cursomvcapi\cursomvcapi\bin\EntityFramework.SqlS
 C:\Users\TeoScarpa\source\repos\cursomvcapi\cursomvcapi\bin\EntityFramework.xml
 C:\Users\TeoScarpa\source\repos\cursomvcapi\cursomvcapi\bin\EntityFramework.SqlServer.xml
 C:\Users\TeoScarpa\source\repos\cursomvcapi\cursomvcapi\obj\Debug\cursomvcapi.csprojAssemblyReference.cache
+C:\Users\TeoScarpa\source\repos\cursomvcapi\cursomvcapi\bin\ApiMultiPartFormData.dll

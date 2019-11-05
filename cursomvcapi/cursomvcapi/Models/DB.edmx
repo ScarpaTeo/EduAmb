@@ -5,24 +5,25 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="cursomvcapiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Animal">
+        <EntityType Name="Contenido">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="titulo" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="subtitulo" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="detalle" Type="varchar(max)" Nullable="false" />
-          <Property Name="categoria" Type="int" />
-          <Property Name="tags" Type="varchar" MaxLength="250" />
-          <Property Name="picture" Type="image" />
+          <Property Name="titulo" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="subtitulo" Type="nvarchar" MaxLength="300" />
+          <Property Name="detalle" Type="nvarchar(max)" />
+          <Property Name="categoria" Type="int" Nullable="false" />
+          <Property Name="tags" Type="nvarchar" MaxLength="300" />
+          <Property Name="picture" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="Galeria">
+        <EntityType Name="Storage">
           <Key>
             <PropertyRef Name="id_galeria" />
           </Key>
           <Property Name="id_galeria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="foto" Type="image" Nullable="false" />
+          <Property Name="foto_name" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="foto" Type="nvarchar(max)" Nullable="false" />
           <Property Name="id_identificador" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
@@ -30,115 +31,73 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre" Type="varchar" MaxLength="150" />
-          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="250" />
+          <Property Name="apellido" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="300" />
+          <Property Name="email" Type="varchar" MaxLength="300" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="token" Type="varchar" MaxLength="100" />
-          <Property Name="idStatus" Type="int" />
-          <Property Name="rol" Type="int" />
+          <Property Name="foto" Type="nvarchar(max)" />
+          <Property Name="rol" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Galeria__id_iden__49C3F6B7">
-          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
-          <End Role="Galeria" Type="Self.Galeria" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Animal">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Galeria">
-              <PropertyRef Name="id_identificador" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="cursomvcapiModelStoreContainer">
-          <EntitySet Name="Animal" EntityType="Self.Animal" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Galeria" EntityType="Self.Galeria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contenido" EntityType="Self.Contenido" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Galeria__id_iden__49C3F6B7" Association="Self.FK__Galeria__id_iden__49C3F6B7">
-            <End Role="Animal" EntitySet="Animal" />
-            <End Role="Galeria" EntitySet="Galeria" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="cursomvcapiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="cursomvcapiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contenido" EntityType="cursomvcapiModel.Contenido" />
+          <EntitySet Name="Storage" EntityType="cursomvcapiModel.Storage" />
           <EntitySet Name="User" EntityType="cursomvcapiModel.User" />
-          <EntitySet Name="Animal" EntityType="cursomvcapiModel.Animal" />
-          <EntitySet Name="Galeria" EntityType="cursomvcapiModel.Galeria" />
-          <AssociationSet Name="FK__Galeria__id_iden__49C3F6B7" Association="cursomvcapiModel.FK__Galeria__id_iden__49C3F6B7">
-            <End Role="Animal" EntitySet="Animal" />
-            <End Role="Galeria" EntitySet="Galeria" />
-          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Contenido">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="subtitulo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="detalle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="categoria" Type="Int32" Nullable="false" />
+          <Property Name="tags" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Storage">
+          <Key>
+            <PropertyRef Name="id_galeria" />
+          </Key>
+          <Property Name="id_galeria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="foto_name" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="foto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="id_identificador" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="apellido" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ubicacion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="token" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="idStatus" Type="Int32" />
-          <Property Name="rol" Type="Int32" />
+          <Property Name="foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rol" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="Animal">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="titulo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="subtitulo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="detalle" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="categoria" Type="Int32" />
-          <Property Name="tags" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Galeria" Relationship="cursomvcapiModel.FK__Galeria__id_iden__49C3F6B7" FromRole="Animal" ToRole="Galeria" />
-        </EntityType>
-        <EntityType Name="Galeria">
-          <Key>
-            <PropertyRef Name="id_galeria" />
-          </Key>
-          <Property Name="id_galeria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="foto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="id_identificador" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Animal" Relationship="cursomvcapiModel.FK__Galeria__id_iden__49C3F6B7" FromRole="Galeria" ToRole="Animal" />
-        </EntityType>
-        <Association Name="FK__Galeria__id_iden__49C3F6B7">
-          <End Type="cursomvcapiModel.Animal" Role="Animal" Multiplicity="1" />
-          <End Type="cursomvcapiModel.Galeria" Role="Galeria" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Animal">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Galeria">
-              <PropertyRef Name="id_identificador" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="cursomvcapiModelStoreContainer" CdmEntityContainer="cursomvcapiEntities">
-          <EntitySetMapping Name="User">
-            <EntityTypeMapping TypeName="cursomvcapiModel.User">
-              <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="rol" ColumnName="rol" />
-                <ScalarProperty Name="idStatus" ColumnName="idStatus" />
-                <ScalarProperty Name="token" ColumnName="token" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Animal">
-            <EntityTypeMapping TypeName="cursomvcapiModel.Animal">
-              <MappingFragment StoreEntitySet="Animal">
+          <EntitySetMapping Name="Contenido">
+            <EntityTypeMapping TypeName="cursomvcapiModel.Contenido">
+              <MappingFragment StoreEntitySet="Contenido">
                 <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="tags" ColumnName="tags" />
                 <ScalarProperty Name="categoria" ColumnName="categoria" />
@@ -149,12 +108,28 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Galeria">
-            <EntityTypeMapping TypeName="cursomvcapiModel.Galeria">
-              <MappingFragment StoreEntitySet="Galeria">
+          <EntitySetMapping Name="Storage">
+            <EntityTypeMapping TypeName="cursomvcapiModel.Storage">
+              <MappingFragment StoreEntitySet="Storage">
                 <ScalarProperty Name="id_identificador" ColumnName="id_identificador" />
                 <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="foto_name" ColumnName="foto_name" />
                 <ScalarProperty Name="id_galeria" ColumnName="id_galeria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="cursomvcapiModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="rol" ColumnName="rol" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

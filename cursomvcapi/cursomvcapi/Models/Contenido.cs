@@ -12,23 +12,14 @@ namespace cursomvcapi.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Animal
+    public partial class Contenido
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Animal()
-        {
-            this.Galeria = new HashSet<Galeria>();
-        }
-    
         public int id { get; set; }
         public string titulo { get; set; }
         public string subtitulo { get; set; }
         public string detalle { get; set; }
-        public Nullable<int> categoria { get; set; }
+        public int categoria { get; set; }
         public string tags { get; set; }
-        public byte[] picture { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Galeria> Galeria { get; set; }
+        public string picture { get; set; }
     }
 }

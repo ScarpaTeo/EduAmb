@@ -1,22 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="cursomvcapiModelStoreContainer" CdmEntityContainer="cursomvcapiEntities">
-    <EntitySetMapping Name="User">
-      <EntityTypeMapping TypeName="cursomvcapiModel.User">
-        <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="rol" ColumnName="rol" />
-          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
-          <ScalarProperty Name="token" ColumnName="token" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Animal">
-      <EntityTypeMapping TypeName="cursomvcapiModel.Animal">
-        <MappingFragment StoreEntitySet="Animal">
+    <EntitySetMapping Name="Contenido">
+      <EntityTypeMapping TypeName="cursomvcapiModel.Contenido">
+        <MappingFragment StoreEntitySet="Contenido">
           <ScalarProperty Name="picture" ColumnName="picture" />
           <ScalarProperty Name="tags" ColumnName="tags" />
           <ScalarProperty Name="categoria" ColumnName="categoria" />
@@ -27,12 +14,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Galeria">
-      <EntityTypeMapping TypeName="cursomvcapiModel.Galeria">
-        <MappingFragment StoreEntitySet="Galeria">
+    <EntitySetMapping Name="Storage">
+      <EntityTypeMapping TypeName="cursomvcapiModel.Storage">
+        <MappingFragment StoreEntitySet="Storage">
           <ScalarProperty Name="id_identificador" ColumnName="id_identificador" />
           <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="foto_name" ColumnName="foto_name" />
           <ScalarProperty Name="id_galeria" ColumnName="id_galeria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="cursomvcapiModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

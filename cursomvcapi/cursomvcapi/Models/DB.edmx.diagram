@@ -5,10 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="8d4ab23562be4195a06e825150ce2f88" Name="Diagram1">
-        <EntityTypeShape EntityType="cursomvcapiModel.User" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="cursomvcapiModel.Animal" Width="1.5" PointX="3.375" PointY="1" />
-        <EntityTypeShape EntityType="cursomvcapiModel.Galeria" Width="1.5" PointX="5.625" PointY="1.375" />
-        <AssociationConnector Association="cursomvcapiModel.FK__Galeria__id_iden__49C3F6B7" />
+        <EntityTypeShape EntityType="cursomvcapiModel.Contenido" Width="1.5" PointX="2.875" PointY="1.625" />
+        <EntityTypeShape EntityType="cursomvcapiModel.Storage" Width="1.5" PointX="4.75" PointY="2.125" />
+        <EntityTypeShape EntityType="cursomvcapiModel.User" Width="1.5" PointX="1" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

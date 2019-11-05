@@ -25,8 +25,8 @@ namespace cursomvcapi.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Contenido> Contenido { get; set; }
+        public virtual DbSet<Storage> Storage { get; set; }
         public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<Animal> Animal { get; set; }
-        public virtual DbSet<Galeria> Galeria { get; set; }
     }
 }

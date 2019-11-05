@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "cdccce56-e628-43d9-aaac-52e53640989c",
+		"name": "API rest Educacion Ambiental ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44398/api/Access/Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"juansa@gmail.com\",\n\t\"password\":\"info\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Access/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Access/Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"219369dc-66cb-4a1f-ac41-53839f5e92fa\",\n\t\"nombre\":\"emanuel\",\n\t\"apellido\":\"skarp\",\n\t\"ubicacion\":\"Resistencia\",\n\t\"email\":\"teoscarpa20094@gmail.com\",\n\t\"password\":\"info\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Access/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"Register"
+					]
+				},
+				"description": "Registrar Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/GetAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"GetAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/GetGallery?id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/GetGallery?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"GetGallery"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Obtener imagenes de galeria por Id de contenido"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/AddGallery?id_contenido=1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Imgpathsave",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/15.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/AddGallery?id_contenido=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"AddGallery"
+					],
+					"query": [
+						{
+							"key": "id_contenido",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Añade imgenes a la galeria pasandole un Id del contenido "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"219369dc-66cb-4a1f-ac41-53839f5e92fa\",\n\t\"titulo\":\"soy el titulo de prueba\",\n\t\"subtitulo\":\"soy el subtitulo de prueba\",\n\t\"detalle\":\"soy el detalle de prueba\",\n\t\"categoria\":3,\n\t\"tags\":\"noticia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/Add?",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"Add"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Añadir Contenido nuevo por Body"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/AddGallery?id_contenido=2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Imgpathsave",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/8.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/AddGallery?id_contenido=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"AddGallery"
+					],
+					"query": [
+						{
+							"key": "id_contenido",
+							"value": "2"
+						}
+					]
+				},
+				"description": "añadir imagen a la geleria indicando un ID de contenido"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/AddImg?id=2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Imgpathsave",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/5.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/AddImg?id=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"AddImg"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Añade una imagen principal a la tabla Contenido "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/Edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"219369dc-66cb-4a1f-ac41-53839f5e92fa\",\n\t\"id\":4,\n\t\"titulo\":\"soy el titulo modificado\",\n\t\"subtitulo\":\"soy el subtitulo modificado\",\n\t\"detalle\":\"soy el detalle modificado\",\n\t\"categoria\":2,\n\t\"tags\":\"proyecto\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/Edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"Edit"
+					]
+				},
+				"description": "Modificar/ editar contenido de la tabla Contenido por Body "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"219369dc-66cb-4a1f-ac41-53839f5e92fa\",\n\t\"id\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/Delete",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"Delete"
+					]
+				},
+				"description": "Eliminar elemento de la tabla Contenido mandando por Bodi el token y el Id del elemento "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Contenido/DeleteFromGallery?id=7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44398/api/Contenido/DeleteFromGallery?id=7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Contenido",
+						"DeleteFromGallery"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				},
+				"description": "Elimina una imagen de la galeria de la BD Storage y del proyecto , recibiendo el id de la imagen que quiere borrar"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Access/AddImg?id=1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Imgpathsave",
+							"type": "file",
+							"src": "/C:/Users/TeoScarpa/Desktop/imagenes escuela/persona1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Access/AddImg?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"AddImg"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Añade una imagen al Usuario/ referente , recibe por params un id del Usuario para añadir la foto"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Access/GetReferentes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44398/api/Access/GetReferentes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"GetReferentes"
+					]
+				},
+				"description": "Muestras todo los referentes sus datos y fotos para lo publico "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44398/api/Access/ADMusers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"219369dc-66cb-4a1f-ac41-53839f5e92fa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/Access/ADMusers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Access",
+						"ADMusers"
+					]
+				},
+				"description": "Muestra todos los referentes y mas datos para el panel del Administrador "
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
