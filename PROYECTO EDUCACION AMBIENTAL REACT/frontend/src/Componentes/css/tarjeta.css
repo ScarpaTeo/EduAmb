@@ -1,0 +1,12 @@
+
+.imagen{
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.tipo{
+    
+    border-radius: 25px;
+}

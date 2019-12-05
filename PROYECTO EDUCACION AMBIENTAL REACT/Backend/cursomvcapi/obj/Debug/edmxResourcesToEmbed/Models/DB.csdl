@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cursomvcapiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="cursomvcapiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Storage" EntityType="cursomvcapiModel.Storage" />
+    <EntitySet Name="Contenido" EntityType="cursomvcapiModel.Contenido" />
+    <EntitySet Name="User" EntityType="cursomvcapiModel.User" />
+  </EntityContainer>
+  <EntityType Name="Storage">
+    <Key>
+      <PropertyRef Name="id_galeria" />
+    </Key>
+    <Property Name="id_galeria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="foto_name" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="foto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id_identificador" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contenido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="subtitulo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="detalle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="categoria" Type="Int32" Nullable="false" />
+    <Property Name="tags" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name_picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ubicacion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="token" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="rol" Type="Int32" Nullable="false" />
+    <Property Name="name_foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
