@@ -13,6 +13,8 @@
     "react-multistep": "^3.6.13",
     "react-router": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-scrollspy": "^3.4.2",
+    "react-scrollspy-nav": "^1.2.1",
     "react-stepper-horizontal": "^1.0.11"
   },
   "scripts": {

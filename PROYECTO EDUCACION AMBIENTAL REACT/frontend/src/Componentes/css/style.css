@@ -1,4 +1,36 @@
+.papita{
+    height: 100vh;
+}
+.sinPadin{
+    padding: 0;
+}
 
+.botoncito{
+    background-image: url('../Img/fondi5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 80vw;
+    margin: auto;
+}
+
+.mapita{
+    margin: auto;
+    min-width: 400px;
+    background-image: url('../Img/fondi4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 80vw;
+}
+
+
+
+@media (min-width: 720px){
+     
+        
+
+}
 
 .mapdiv{
     margin: auto;

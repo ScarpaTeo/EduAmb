@@ -33,7 +33,7 @@ render() {
         </button>
         <div class="dropdown-menu">
           <MDBNavLink  className="dropdown-item" to="/">Añadir</MDBNavLink>
-          <MDBNavLink  className="dropdown-item" to="/QueHacemos">Eventos</MDBNavLink>
+          <MDBNavLink  className="dropdown-item" to="/Eventos">Eventos</MDBNavLink>
           <MDBNavLink  className="dropdown-item" to="/Provincias">Regiones</MDBNavLink>
           <MDBNavLink  className="dropdown-item" to="/RedReferentes">Red Referentes</MDBNavLink>
           <MDBNavLink  className="dropdown-item" to="/Sumate">Sumate</MDBNavLink>

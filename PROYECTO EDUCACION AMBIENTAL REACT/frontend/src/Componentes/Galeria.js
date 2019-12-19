@@ -31,19 +31,17 @@ function Galeria({imagenes,categoria}){
     }
     
     return(
-        <div fluid className="fondito px-3 pt-5 mt-5" style={{borderRadius: "25px"}}>
-            <section className="text-center mb-5">
-                <div className="col-md-12 info-color #33b5e5 p-1 mb-3" style={{borderRadius: "25px"}}>
+        <div fluid className="fondito px-3 pt-2 mb-1 mt-5" style={{borderRadius: "25px"}}>
+            <section className="text-center mt-1">
+                <div className="col-md-12 info-color #33b5e5 p-1 mb-3" style={{borderRadius: "25px",marginTop:"30px"}}>
                     <h5 className="h3-responsive white-text text-center mt-1">{men}</h5>
                 </div>
 
                 <div className="row card-columns">
-                {imagenes.map(imagen=>(
-                
 
+                {imagenes.map(imagen=>(
                         <Tarjeta
                         imagen={imagen}/>                
-                
                     ))}
                 </div>
             </section>

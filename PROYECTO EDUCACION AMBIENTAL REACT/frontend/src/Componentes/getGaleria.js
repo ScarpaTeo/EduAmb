@@ -1,12 +1,6 @@
 import React, { useState,useEffect } from 'react'
-import { MDBContainer} from "mdbreact";
 import Galeria from './Galeria'
 import './css/getGaleria.css'
-
-
-
-
-
 
 function GetGaleria({filtro}){
     const [imagenes,guardarImagenes]=useState([]);
@@ -52,22 +46,18 @@ function GetGaleria({filtro}){
 
     return(
 
-        <div fluid className="container-fluid">
-            <div className="text-center">
+        <React.Fragment>
+            <div className="row">
+            <div className="text-center col-md-12">
 
                 <Galeria
                     imagenes={mostrar.reverse()}
                     categoria={filtro}
                 />
-                {(paginaActual===1) ? null :(
-                    <button onClick={paginaAnterior} type="button" className="btn btn-info mr-1">Anterior &laquo;</button>
-                )}
-
-                {(paginaActual===totalPaginas) ? null:(
-                    <button onClick={paginaSiguiente} type="button" className="btn btn-info mr-1">Siguiente &raquo;</button>                    
-                )}
+                
             </div>
-        </div> 
+            </div>
+        </React.Fragment> 
 
     )
 }

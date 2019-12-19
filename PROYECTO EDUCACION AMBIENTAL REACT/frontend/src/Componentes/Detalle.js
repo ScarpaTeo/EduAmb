@@ -13,54 +13,50 @@ const Detallecont = ({contenido,galeria,imagenes}) => {
         <React.Fragment>
             
 
-            <div class="jumbotron text-center hoverable p-4 bg-white" style={{borderRadius:"25px"}}>
+            <div class="bg-white" style={{borderRadius:"25px"}}>
 
-                <div class="row">
+                <div class="row justify-content-center align-items-center">
+            <div className="col-md-11 col-sm-4 info-color #33b5e5 p-1 mb-2" style={{borderRadius: "25px",marginTop:"30px"}}>
+              <h5 className="h4-responsive white-text text-center mt-1">Recorre La provincia</h5>
+            </div>
 
-                    <div class="col-md-4 offset-md-1 mx-3 my-3">
-
-                    <div class="img-fluid">
-                        <img src={newImg2}  style={{borderRadius:"5px"}} width="100%" class="img-fluid" alt="Sample image for first version of blog listing"/>
-                        <a>
-                        <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
+                    <div class="col-12 col-md-6 mb-2 p-md-5">
+                       
+                        <img src={newImg2}  style={{borderRadius:"25px"}}  class="img-fluid" alt="Sample image for first version of blog listing"/>
 
                     </div>
 
-                    <div class="col-md-7 text-md-left ml-3 mt-3">
+                    <div class="col-12 col-md-6 my-2 p-md-5 ">
 
 
-                    <h2 class="h2 mb-4 display-4 font-roboto blue-text">{titulo}</h2>
-                    <h5 class="h3 mb-4 font-roboto blue-text">{subtitulo}</h5>
+                        <h4 className="blue-text card-title mb-1 p-3" style={{fontSize:"30px",textAlign:"left"}}><strong>{titulo}</strong></h4>
+                        <hr className="blue-text card-title mb-1 p-3"/>
+                        <p className="gray-text card-title mb-2 p-3" style={{fontSize:"22px",textAlign:"left"}}>{subtitulo}</p>
 
-                    <p class="font-weight-normal font-roboto blue-text" style={{fontSize:"14px"}}>{detalle}</p>
-                    <p class="font-weight-normal font-roboto blue-text">Categoria<a><strong> {tags} </strong></a></p>
+                        <p class="card-text gray-text mb-4 p-3" style={{fontSize:"15px",textAlign:"left"}}>{detalle}</p>
+                        <p class="card-text gray-text mb-4 p-3" style={{fontSize:"15px",textAlign:"left"}}>Categoria<a><strong className="blue-text" style={{fontSize:"25px"}}> {tags} </strong></a></p>
 
                     
 
                     </div>
-                    
-                    <div className="col-md-11 mx-auto">
-                    <br/>
-                    <br/>
-                    <br/>
                     <hr width="80%" style={{color:"blue", borderStyle:"solid"}}/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                        <div className="row">
-                        {imagenes.map(items=>(
-                            <div className="col-md-2" style={{margin:"2px"}}>
 
-                                <Detallegaleria
-                                galeria={items}
-                                /> 
+                    <div className="col-12 col-md-10">
+                    <p class="card-text text-center gray-text mb-4 p-3" style={{fontSize:"15px",textAlign:"left"}}>Galeria de Multimedia</p>
+                    
+                  
+                        
+                            <div className="row">
+                            {imagenes.map(items=>(
+                                <div className="col-md-3 my-1">
 
-                            </div>
-                        ))}
-                    </div>
+                                    <Detallegaleria
+                                    galeria={items}
+                                    /> 
+
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                 </div>

@@ -12,7 +12,7 @@ const FormularioCont = () => {
             <div className="px-3 py-3">
                 <img className="img-fluid animated bounceInDown slower" src={logo}  width="300"/>
             </div>
-            <div className=" card mx-auto animated bounceInLeft delay-1 slower" style={{width:'50rem', margin:'30px', borderRadius:"35px"}}>
+            <div className=" card mx-auto" style={{width:'50rem', margin:'30px', borderRadius:"35px"}}>
 
                 <br/>
                 <br/>

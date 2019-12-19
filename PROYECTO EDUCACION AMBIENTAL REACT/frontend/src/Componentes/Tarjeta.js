@@ -36,10 +36,11 @@ const Tarjeta =({imagen}) =>{
 
     var tipo = "tipo";
 
+
     
     //aca tranformo la imagen de la base a un formato para mostrar
     return (
-        <div className="col-12 col-sm-6 col-md-4 col-lg-3" >
+        <div className="col-12 col-sm-6 col-md-4 col-lg-4" >
           <div collection className="card z-depth-1-half mb-4" style={{borderRadius: "25px", boxShadow: "0px 10px 10px #000000"}}>
             
             <div className="m-3">
@@ -49,10 +50,10 @@ const Tarjeta =({imagen}) =>{
                 <h6 className="pt-1 white-text card-text"><small>{tags}</small></h6>
               </div>
               
-              <h6 className="pt-3 blue-text mx-4 card-title" ><strong>{titulo}</strong></h6>
+              <h6 className="pt-3 blue-text mx-4 card-title"><strong>{titulo}</strong></h6>
               <p className="pt-3 mx-2 card-text"><small>{subtitulo}</small></p>
 
-              <Link className="btn light-blue white-text mb-3" to={{
+              <Link className=" light-info white-text mb-3 btn btn-outline-info btn-rounded waves-effect btn-sm " to={{
                             pathname: `/Contenido/${imagen.id}`,
                             state: {
                             fromNotifications: true

@@ -19,7 +19,7 @@ class Formulario extends React.Component{
     render(){
         const {onChange,onSubmit,form}=this.props
         return(
-                 <div className="card white" style={{ borderRadius:"35px"}}>
+                 <div className="card white my-5" style={{ borderRadius:"35px"}}>
                     <h5 className="card-header info-color text-white text-center py-4" style={{ borderRadius:"35px"}} >
                         <strong>Nueva Publicacion</strong>
                     </h5>

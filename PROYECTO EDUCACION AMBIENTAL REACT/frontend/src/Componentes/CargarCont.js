@@ -118,7 +118,7 @@ handleImageChange = (e) => {
         case 0:
           mostrar=
           <React.Fragment>
-            <div className="row justify-content-center align-items-center px-2">
+            <div className="row justify-content-center align-items-center px-2 py-5">
               <div className="col-10 col-md-8"  >
               <Formulario
                     form={this.state.form}
@@ -138,7 +138,7 @@ handleImageChange = (e) => {
         case 1:
           mostrar=
           <React.Fragment>
-            <div className="row justify-content-center align-items-center px-2">
+            <div className="row justify-content-center align-items-center px-2 py-5">
               <div className="col-10 col-md-8" >
               <FormImg
                   onChange={this.handleImageChange}
@@ -158,7 +158,7 @@ handleImageChange = (e) => {
         case 2:
           mostrar=
           <React.Fragment>
-            <div className="row">
+            <div className="row py-5">
               <div className="card mx-auto" style={{width:'50rem', margin:'30px', borderRadius:"35px"}}>
                 <div className="card-body px-lg-5">
                 <Link className="btn btn-outline-primary btn-rounded waves-effect btn-lg btn-block" to={{

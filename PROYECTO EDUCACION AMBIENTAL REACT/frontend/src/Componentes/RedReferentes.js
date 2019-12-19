@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Referente from './referente'
-import NavBarPage from './NavbarPage'
-import Footer from './Footer'
+import Referente from './referente';
 
 const RedReferentes = () => {
 
@@ -21,23 +19,18 @@ const RedReferentes = () => {
     }, [dato])
 
   return (
-    <div>
-      <div className="container" style={{minHeight: "100vh"}}>
+      <div className="container cachilo pb-5">
           <div className="p-1 mb-3">
-            <h2 className="h1-responsive white-text font-weight-bold text-center my-5 ">
-            Referentes Educacion Ambiental Chaco 
-            </h2>
-            <p className="white-text text-center w-responsive mx-auto mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-            error amet numquam iure provident voluptate esse quasi, veritatis
-            totam voluptas nostrum quisquam eum porro a pariatur veniam.
-            </p>
+            <div className="col-md-12 info-color #33b5e5 p-1 mb-3" style={{borderRadius: "25px",marginTop:"30px"}}>
+              <h5 className="h3-responsive white-text text-center mt-1">Referentes Educacion Ambiental Chaco</h5>
+            </div>
+          
           </div>
-        <div className="row card-columns">
+          <div className="row justify-content-center align-items-center card-column">
           
               {dato.map(item => (
                   
-                  <div className="col-sm-6 col-md-4">
+                  <div className="col-md-4 col-sm-6">
 
                     <Referente
                       information = {item}
@@ -51,7 +44,6 @@ const RedReferentes = () => {
 
 
       </div>
-    </div>
     );
 
 

@@ -47,7 +47,6 @@ const Detalle = () =>{
         <React.Fragment>
             <div className="row pt-5" style={{maxWidth:"90%", margin:"auto"}}>
                 <div className="col-md-12" style={{padding:"5px"}}>
-                    <button className="btn btn-info" onClick={ event => window.history.back()}> atras</button>
                     {data.map(items=>(
                         <Detallecont
                         contenido={items}

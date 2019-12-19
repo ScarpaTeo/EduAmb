@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import imgpdf from '../Componentes/Img/pdf.png'
-import '../Componentes/css/Galleria.css'
 
 
 
@@ -22,7 +21,7 @@ const DetalleGaleri = ({galeria}) => {
 
                                 <a data-toggle="modal" data-target={target}>
                                     <div className="galeria">
-                                    <img src={imgpdf} className="fotica" style={{borderRadius:"5px", maxWidth:"100%"}} alt="Card image cap"/> 
+                                    <img src={imgpdf} className="fotica" style={{borderRadius:"5px",minWidth:"200px",minHeight:"200px",maxWidth:"200px",maxHeight:"200px",objectFit:"cover"}} alt="Card image cap"/> 
                                     </div>
                                 </a>
                                 
@@ -51,12 +50,12 @@ const DetalleGaleri = ({galeria}) => {
     }
     
     if(name.includes('.pdf')===false){
-        mostrar=<div className="row">
+        mostrar=<div className="" style={{maxHeight:"100vh"}}>
                     
-                    <div className="mx-auto" style={{ borderRadius:"5px", maxWidth:"200px",maxHeight:"250px"}}>
+                <div className="mx-auto " style={{ borderRadius:"5px", maxWidth:"200px",maxHeight:"250px"}}>
                         <div className="" style={{margin:"auto"}}>
                         <a data-toggle="modal" data-target={target}>
-                            <img src={newImg2} style={{borderRadius:"5px",maxWidth:"100%"}} alt="Card image cap"/>
+                            <img className="img-fluid" src={newImg2} style={{borderRadius:"5px",minWidth:"200px",minHeight:"200px",maxWidth:"200px",maxHeight:"200px",objectFit:"cover"}} alt="Card image cap"/>
                         </a>
 
                             <div class="modal fade" id={idtarget} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -69,7 +68,7 @@ const DetalleGaleri = ({galeria}) => {
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src={newImg2} width="100%" alt="#"/>
+                                    <img className="img-fluid" src={newImg2} width="100%" alt="#"/>
                                 </div>
                                 </div>
                             </div>
@@ -86,9 +85,9 @@ const DetalleGaleri = ({galeria}) => {
   return (
         <React.Fragment>
             <div className="galeria">
-            {mostrar}
+                {mostrar}
+            
             </div>
-
             {mostrarpdf}
         </React.Fragment>
     )
